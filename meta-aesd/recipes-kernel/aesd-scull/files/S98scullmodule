@@ -1,0 +1,17 @@
+#!/bin/sh
+
+case "$1" in
+    start)
+        echo "Loading SCULL Kernel Module"
+        /etc/scull_load
+        ;;
+    stop)
+        echo "Unloading SCULL Kernel Module"
+        /etc/scull_unload
+        ;;
+    *)
+        echo "Usage: $0 {start|stop}"
+        exit 1
+esac
+
+exit 0

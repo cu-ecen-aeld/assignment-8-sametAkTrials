@@ -1,0 +1,24 @@
+diff --git a/scull/Makefile b/scull/Makefile
+index 3f6c8d0..8089d7a 100644
+--- a/scull/Makefile
++++ b/scull/Makefile
+@@ -23,11 +23,16 @@ obj-m	:= scull.o
+ 
+ else
+ 
+-KERNELDIR ?= /lib/modules/$(shell uname -r)/build
+-PWD       := $(shell pwd)
++# KERNELDIR ?= /lib/modules/$(shell uname -r)/build
++KERNEL_SRC ?= /lib/modules/$(shell uname -r)/build
++# PWD       := $(shell pwd)
++SRC := $(shell pwd)
+ 
+ modules:
+-	$(MAKE) -C $(KERNELDIR) M=$(PWD) modules
++	$(MAKE) -C $(KERNEL_SRC) M=$(SRC) modules
++
++modules_install:
++	$(MAKE) -C $(KERNEL_SRC) M=$(SRC) modules_install
+ 
+ endif
+ 
