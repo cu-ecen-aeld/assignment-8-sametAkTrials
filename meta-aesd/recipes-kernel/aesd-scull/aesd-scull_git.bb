@@ -12,7 +12,7 @@ SRC_URI = " git://git@github.com/cu-ecen-aeld/assignment-7-sametAkTrials.git;pro
           "
 
 PV = "1.0+git${SRCPV}"
-SRCREV = "${AUTOREV}"
+SRCREV = "3682557389b674d8c063e95cbf84785d20a88558"
 
 S = "${WORKDIR}/git/scull"
 
