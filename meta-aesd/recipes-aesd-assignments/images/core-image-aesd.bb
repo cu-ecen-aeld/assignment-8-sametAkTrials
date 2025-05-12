@@ -7,6 +7,8 @@ CORE_IMAGE_EXTRA_INSTALL += " \
                             aesd-misc-modules   \
                             kernel-module-scull \
                             aesd-scull  \
+                            kernel-module-aesd-char-driver \
+                            aesd-char-driver \
                             "
 inherit extrausers
 # See https://docs.yoctoproject.org/singleindex.html#extrausers-bbclass
